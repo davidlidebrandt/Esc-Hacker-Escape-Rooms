@@ -16,10 +16,28 @@ $grey: #b6bdb5;
 .header {
   background-color: $dark-blue;
   height: 144px;
+  
   img {
     height: 82px;
     width: 128px;
     margin-left: 26px;
     margin-top: 27px;
   }
+  
+  p {
+    display: inline-block;
+    color: #FFF;
+    font-size: 1.5rem;
+    margin: 0;
+    margin-left: 13px;
+    width: 78px;
+  }
+}
+
+.hamburger-icon {
+    display: inline-block;
+    div {
+        width: 51px;
+        border: 6px solid #FFF;
+    }
 }

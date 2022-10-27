@@ -13,5 +13,21 @@ body {
   margin-left: 26px;
   margin-top: 27px;
 }
+.header p {
+  display: inline-block;
+  color: #FFF;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-left: 13px;
+  width: 78px;
+}
+
+.hamburger-icon {
+  display: inline-block;
+}
+.hamburger-icon div {
+  width: 51px;
+  border: 6px solid #FFF;
+}
 
 /*# sourceMappingURL=output.css.map */
