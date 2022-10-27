@@ -1,0 +1,25 @@
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+$red: #e3107a;
+
+$dark-blue: #011827;
+
+$blue: #36769d;
+
+$light-blue: #bacfe5;
+
+$grey: #b6bdb5;
+
+.header {
+  background-color: $dark-blue;
+  height: 144px;
+  img {
+    height: 82px;
+    width: 128px;
+    margin-left: 26px;
+    margin-top: 27px;
+  }
+}
