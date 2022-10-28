@@ -3,17 +3,45 @@ body {
   margin: 0;
 }
 
+.white-button, .blue-button, .red-button {
+  border-radius: 4px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  display: block;
+}
+
+.red-button {
+  background-color: #e3170a;
+  color: #FFF;
+}
+
+.blue-button {
+  background-color: #8acfe5;
+  color: #011827;
+}
+
+.white-button {
+  color: #8acfe5;
+  border: 2px solid #8acfe5;
+}
+
 .header {
   background-color: #011827;
-  height: 144px;
+  padding-bottom: 27px;
+  padding-top: 27px;
+  padding-left: 26px;
+  padding-right: 20px;
 }
-.header img {
+
+.header-logo {
   height: 82px;
   width: 128px;
-  margin-left: 26px;
-  margin-top: 27px;
 }
-.header p {
+
+.header-logo-text {
   display: inline-block;
   color: #FFF;
   font-size: 1.5rem;
@@ -23,11 +51,21 @@ body {
 }
 
 .hamburger-icon {
-  display: inline-block;
+  float: right;
 }
 .hamburger-icon div {
   width: 51px;
-  border: 6px solid #FFF;
+  height: 6px;
+  background-color: #FFF;
+  border-radius: 10px;
+  margin-top: 4px;
+}
+
+.hero-image {
+  height: 274px;
+  width: 100%;
+  background: url("images/hero.png") no-repeat center;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=output.css.map */
