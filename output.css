@@ -173,4 +173,32 @@ body {
   margin-bottom: 3rem;
 }
 
+.action-section h3 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.action-section p {
+  font-size: 1.5rem;
+  margin-bottom: 48px;
+}
+.action-section button {
+  margin: 0;
+}
+
+.booking-image {
+  height: 300px;
+  background: url("images/people-working.png") no-repeat;
+  background-size: cover;
+}
+
+.view-challanges-image {
+  height: 300px;
+  background: url("images/woman-working.png") no-repeat;
+  background-size: cover;
+}
+
+.action-section-info {
+  padding: 30px 20px 64px 20px;
+}
+
 /*# sourceMappingURL=output.css.map */
