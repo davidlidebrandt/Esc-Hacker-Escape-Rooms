@@ -201,4 +201,26 @@ body {
   padding: 30px 20px 64px 20px;
 }
 
+.footer {
+  margin-top: 34px;
+  background-color: #011827;
+  padding: 64px 22px;
+  color: #FFF;
+}
+.footer h3 {
+  margin-top: 68px;
+}
+.footer p {
+  font-size: 16px;
+}
+.footer a {
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+.footer .site-map-play-links {
+  margin-top: 2rem;
+}
+
 /*# sourceMappingURL=output.css.map */

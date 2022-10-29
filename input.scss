@@ -224,3 +224,25 @@ body {
 .action-section-info {
     @include action-section-info()
 }
+
+.footer {
+    margin-top: 34px;
+    background-color: $dark-blue;
+    padding: 64px 22px;
+    color: #FFF;
+    h3 {
+        margin-top: 68px;
+    }
+    p {
+        font-size: 16px;
+    }
+    a {
+        display: block;
+        color: #FFF;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+    }
+    .site-map-play-links {
+        margin-top: 2rem;
+    }
+}
