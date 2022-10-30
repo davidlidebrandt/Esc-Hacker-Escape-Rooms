@@ -15,6 +15,12 @@ body {
     margin: 0;
   }
 
+@mixin media-query {
+    @media screen and (min-width: 800px) {
+        @content;
+    }
+}
+
 %button-shared {
     border-radius: 4px;
     border: none;
@@ -24,6 +30,12 @@ body {
     padding: 1rem 2rem;
     display: block;
     margin: 0 auto;
+}
+
+%links-shared {
+    text-decoration: none;
+    display: block;
+    color: #FFF;
 }
 
 .red-button {
@@ -55,11 +67,18 @@ body {
 }
 
 .header-logo {
+    @include media-query() {
+        vertical-align: bottom;
+    }
     height: 82px;
     width: 128px;
 }
 
 .header-logo-text {
+    @include media-query() {
+        width: auto;
+        font-size: 2.5rem;
+    }
     display: inline-block;
     color: #FFF;
     font-size: 1.5rem;
@@ -69,6 +88,9 @@ body {
 }
 
 .hamburger-icon {
+    @include media-query() {
+        display: none;
+    }
     float: right;
     div {
         width: 51px;
@@ -80,11 +102,39 @@ body {
 }
 
 .hero-image {
+    @include media-query() {
+        height: 468px;
+    }
     height: 274px;
     width: 100%;
     background: url("images/hero.png") no-repeat center;
     background-size: cover;
     margin-bottom: 3rem;
+}
+
+.hero-buttons {
+    .red-button {
+        display: none;
+    }
+    @include media-query() {
+        position: relative;
+        .large-buttons {
+            position: absolute;
+            top: -80px;
+            width: 100%;
+            text-align: center;
+        }
+        .blue-button {
+            display: inline-block;
+            margin-right: 17px;
+        }
+        .red-button {
+            display: inline-block;
+        }
+        .online-challenge-button {
+            display: none;
+        }
+    }
 }
 
 .online-challenge-button {
@@ -237,12 +287,27 @@ body {
         font-size: 16px;
     }
     a {
-        display: block;
-        color: #FFF;
-        text-decoration: none;
-        margin-bottom: 0.5rem;
+        @extend %links-shared;
+        margin-bottom: .5rem;
     }
     .site-map-play-links {
         margin-top: 2rem;
+    }
+}
+
+.header-nav {
+    @include media-query() {
+        display: flex;
+        justify-content: space-around;
+        padding: 0px 10%;
+    }
+    display: none;
+    margin-top: 58px;
+    a {
+        @extend %links-shared;
+        font-size: 1.5rem;
+    }
+    .active-link {
+        color: $light-blue;
     }
 }

@@ -14,6 +14,12 @@ body {
   margin: 0 auto;
 }
 
+.header-nav a, .footer a {
+  text-decoration: none;
+  display: block;
+  color: #FFF;
+}
+
 .red-button {
   background-color: #e3170a;
   color: #FFF;
@@ -42,6 +48,11 @@ body {
   height: 82px;
   width: 128px;
 }
+@media screen and (min-width: 800px) {
+  .header-logo {
+    vertical-align: bottom;
+  }
+}
 
 .header-logo-text {
   display: inline-block;
@@ -51,9 +62,20 @@ body {
   margin-left: 13px;
   width: 78px;
 }
+@media screen and (min-width: 800px) {
+  .header-logo-text {
+    width: auto;
+    font-size: 2.5rem;
+  }
+}
 
 .hamburger-icon {
   float: right;
+}
+@media screen and (min-width: 800px) {
+  .hamburger-icon {
+    display: none;
+  }
 }
 .hamburger-icon div {
   width: 51px;
@@ -69,6 +91,36 @@ body {
   background: url("images/hero.png") no-repeat center;
   background-size: cover;
   margin-bottom: 3rem;
+}
+@media screen and (min-width: 800px) {
+  .hero-image {
+    height: 468px;
+  }
+}
+
+.hero-buttons .red-button {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .hero-buttons {
+    position: relative;
+  }
+  .hero-buttons .large-buttons {
+    position: absolute;
+    top: -80px;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-buttons .blue-button {
+    display: inline-block;
+    margin-right: 17px;
+  }
+  .hero-buttons .red-button {
+    display: inline-block;
+  }
+  .hero-buttons .online-challenge-button {
+    display: none;
+  }
 }
 
 .online-challenge-button {
@@ -214,13 +266,28 @@ body {
   font-size: 16px;
 }
 .footer a {
-  display: block;
-  color: #FFF;
-  text-decoration: none;
   margin-bottom: 0.5rem;
 }
 .footer .site-map-play-links {
   margin-top: 2rem;
+}
+
+.header-nav {
+  display: none;
+  margin-top: 58px;
+}
+@media screen and (min-width: 800px) {
+  .header-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 10%;
+  }
+}
+.header-nav a {
+  font-size: 1.5rem;
+}
+.header-nav .active-link {
+  color: #8acfe5;
 }
 
 /*# sourceMappingURL=output.css.map */
