@@ -256,6 +256,11 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.take-action-buttons {
+    text-align: center;
+    padding: 6rem 0;
+}
+
 .story-section {
     margin-top: 3rem;
     padding: 4rem 2rem;
@@ -265,6 +270,9 @@ body {
     p {
         font-size: 1.5rem;
         margin-bottom: 3rem;
+    }
+    @include media-query() {
+        padding: 6rem 25% 9rem 25%;
     }
 }
 
