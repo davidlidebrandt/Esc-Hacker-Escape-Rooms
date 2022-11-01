@@ -139,9 +139,24 @@ body {
 .testimonials {
   margin: 6rem 0;
 }
+@media screen and (min-width: 800px) {
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
 
 .testimonial {
+  display: none;
+}
+.testimonial:first-child {
   display: flex;
+}
+@media screen and (min-width: 800px) {
+  .testimonial {
+    display: flex;
+    grid-column: span 6/span 6;
+  }
 }
 
 .testimonial-text {
@@ -166,11 +181,24 @@ body {
 .popular-challenges {
   margin-bottom: 3rem;
 }
+@media screen and (min-width: 800px) {
+  .popular-challenges {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}
 
 .popular-challenges-heading {
   text-align: center;
   font-size: 2rem;
   font-weight: 400;
+}
+@media screen and (min-width: 800px) {
+  .popular-challenges-heading {
+    display: block;
+    grid-column: span 12/span 12;
+    margin-bottom: 5rem;
+  }
 }
 
 .challenge-card {
@@ -178,6 +206,17 @@ body {
   border-radius: 8px;
   margin-left: 52px;
   margin-right: 38px;
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .challenge-card {
+    display: block;
+    grid-column: span 4/span 4;
+  }
+}
+
+.first-challenge-card {
+  display: block;
 }
 
 .challenge-card-image {

@@ -67,11 +67,11 @@ body {
 }
 
 .header-logo {
+    height: 82px;
+    width: 128px;
     @include media-query() {
         vertical-align: bottom;
     }
-    height: 82px;
-    width: 128px;
 }
 
 .header-logo-text {
@@ -152,10 +152,21 @@ body {
 
 .testimonials {
     margin: 6rem 0;
+    @include media-query() {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
 }
 
 .testimonial {
-    display: flex;
+    display: none;
+    &:first-child {
+        display: flex;
+    }
+    @include media-query() {
+        display: flex;
+        grid-column: span 6/ span 6;
+    }
 }
 
 .testimonial-text {
@@ -179,12 +190,21 @@ body {
 
 .popular-challenges {
     margin-bottom: 3rem;
+    @include media-query() {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
 }
 
 .popular-challenges-heading {
     text-align: center;
     font-size: 2rem;
     font-weight: 400;
+    @include media-query() {
+        display: block;
+        grid-column: span 12 / span 12;
+        margin-bottom: 5rem;
+    }
 }
 
 .challenge-card {
@@ -192,6 +212,15 @@ body {
     border-radius: 8px;
     margin-left: 52px;
     margin-right: 38px;
+    display: none;
+    @include media-query() {
+        display: block;
+        grid-column: span 4 / span 4;
+    }
+}
+
+.first-challenge-card {
+    display: block;
 }
 
 .challenge-card-image {
@@ -296,13 +325,13 @@ body {
 }
 
 .header-nav {
+    display: none;
+    margin-top: 58px;
     @include media-query() {
         display: flex;
         justify-content: space-around;
         padding: 0px 10%;
     }
-    display: none;
-    margin-top: 58px;
     a {
         @extend %links-shared;
         font-size: 1.5rem;
