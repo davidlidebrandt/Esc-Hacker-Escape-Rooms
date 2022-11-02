@@ -101,6 +101,28 @@ body {
     }
 }
 
+.header-nav {
+    display: none;
+    margin-top: 58px;
+    @include media-query() {
+        padding: 0px 10%;
+        display: block;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+    a {
+        @extend %links-shared;
+        font-size: 1.5rem;
+    }
+    a:hover {
+        color: $light-blue;
+    }
+}
+
+
 .hero-image {
     @include media-query() {
         height: 468px;
@@ -332,19 +354,9 @@ body {
     }
 }
 
-.header-nav {
-    display: none;
-    margin-top: 58px;
-    @include media-query() {
-        display: flex;
-        justify-content: space-around;
-        padding: 0px 10%;
-    }
-    a {
-        @extend %links-shared;
-        font-size: 1.5rem;
-    }
-    .active-link {
-        color: $light-blue;
+.footer-nav {
+    ul {
+        list-style: none;
+        padding: 0;
     }
 }
