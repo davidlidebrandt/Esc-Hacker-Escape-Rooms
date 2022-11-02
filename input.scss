@@ -299,31 +299,57 @@ body {
 }
 
 .action-section {
+    @include media-query() {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
     h3 {
         font-weight: 700;
         font-size: 2rem;
+         @include media-query() {
+            margin-bottom: 25px;
+            margin-top: 0px;
+         }
     }
     p {
         font-size: 1.5rem;
         margin-bottom: 48px;
+        @include media-query() {
+            margin-bottom: 30px;
+            margin-top: 0px;
+        }
     }
     button {
         margin: 0;
+    }
+    .red-button {
+        @include media-query() {
+            width: max-content;
+        }
     }
 }
 
 @mixin  action-section-image($image-url) {
     height: 300px;
-    background: url($image-url) no-repeat;
+    background: url($image-url) no-repeat center;
     background-size: cover;
 }
 
 .booking-image {
-    @include action-section-image("images/people-working.png")
+    @include action-section-image("images/people-working.png");
+    @include media-query() {
+        grid-column: span 6 / span 6;
+        height: 460px;
+    }
 }
 
 .view-challanges-image {
-    @include action-section-image("images/woman-working.png")
+    @include action-section-image("images/woman-working.png");
+    @include media-query() {
+        grid-column: span 6 / span 6;
+        grid-column-start: 7;
+        height: 460px;
+    }
 }
 
 @mixin action-section-info {
@@ -331,7 +357,19 @@ body {
 }
 
 .action-section-info {
-    @include action-section-info()
+    @include action-section-info();
+    @include media-query() {
+        grid-column: span 6 / span 6;
+        padding: 0 15%;
+        display: grid;
+        place-content: center;
+    }
+}
+
+.challenge-section-info {
+    @include media-query(){
+        grid-row-start: 1;
+    }
 }
 
 .footer {
