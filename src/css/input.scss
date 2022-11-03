@@ -69,7 +69,7 @@ body {
         height: 6px;
         background-color: #FFF;
         border-radius: 10px;
-        margin-top: 4px;
+        margin-top: 7px;
     }
 }
 
@@ -103,7 +103,7 @@ body {
     width: 100%;
     background: url("../images/hero.png") no-repeat center;
     background-size: cover;
-    margin-bottom: 3rem;
+    margin-bottom: 37px;
 }
 
 .hero-buttons {
@@ -141,11 +141,13 @@ body {
     margin: 0 auto;
     display: block;
     font-size: 1rem;
-    margin-top: 3rem;
+    margin-top: 30px;
 }
 
 .testimonials {
-    margin: 6rem 0;
+    margin: 0;
+    margin-top: 67px;
+    margin-bottom: 105px;
     @include media-query() {
         display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -194,6 +196,11 @@ body {
     text-align: center;
     font-size: 2rem;
     font-weight: 400;
+    h2 {
+        margin-bottom: 44px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
     @include media-query() {
         display: block;
         grid-column: span 12 / span 12;
@@ -225,8 +232,7 @@ body {
 }
 
 .challenge-card-info {
-    padding: 17px;
-    padding-bottom: 13px;
+    padding: 0px 17px 13px 17px;
     img {
         vertical-align: middle;
     }
@@ -238,6 +244,9 @@ body {
         margin: 0;
         font-size: 1rem;
     }
+    h3 {
+        font-weight: 400;
+    }
 }
 
 .card-button-parent {
@@ -248,22 +257,24 @@ body {
 .card-heading {
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
+    margin-top: 12px;
 }
 
 .take-action-buttons {
     text-align: center;
-    padding: 6rem 0;
+    padding: 47px 0px 0px 0px;
 }
 
 .story-section {
     margin-top: 3rem;
-    padding: 4rem 2rem;
+    padding: 5.5rem 2rem;
     background-color: $dark-blue;
     color: #FFF;
     text-align: center;
     p {
         font-size: 1.5rem;
         margin-bottom: 3rem;
+        margin-top: 0px;
     }
     @include media-query() {
         padding: 6rem 25% 9rem 25%;
@@ -274,6 +285,7 @@ body {
     h3 {
         font-weight: 700;
         font-size: 2rem;
+        margin-top: 0;
          @include media-query() {
             margin-bottom: 25px;
             margin-top: 0px;
@@ -345,11 +357,12 @@ body {
     background-color: $dark-blue;
     padding: 64px 22px;
     color: #FFF;
-    h3 {
-        margin-top: 68px;
+    h2 {
+        margin-top: 40px;
+        font-size: 18px;
     }
     p {
-        font-size: 16px;
+        font-size: 18px;
     }
     a {
         @extend %links-shared;
