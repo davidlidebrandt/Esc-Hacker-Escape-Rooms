@@ -343,6 +343,12 @@ body {
   }
 }
 
+@media screen and (min-width: 800px) {
+  .view-challanges-section {
+    padding-bottom: 12rem;
+  }
+}
+
 .view-challanges-image {
   height: 300px;
   background: url("images/woman-working.png") no-repeat center;
@@ -391,6 +397,25 @@ body {
 }
 .footer .site-map-play-links {
   margin-top: 2rem;
+}
+.footer .footer-info {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.footer .footer-links {
+  grid-column-start: 8;
+  grid-column-end: 10;
+}
+.footer .footer-social-links {
+  grid-column: span 2/span 2;
+}
+@media screen and (min-width: 800px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    padding: 6rem 8rem;
+    margin-top: 0;
+  }
 }
 
 .footer-nav ul {
