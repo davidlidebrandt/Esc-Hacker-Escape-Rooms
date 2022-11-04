@@ -124,6 +124,7 @@ body {
         }
         .red-button {
             display: inline-block;
+            margin-right: 0.8rem;
         }
         .online-challenge-button {
             display: none;
@@ -151,6 +152,7 @@ body {
     @include media-query() {
         display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));
+        padding: 0 9%;
     }
 }
 
@@ -189,6 +191,7 @@ body {
     @include media-query() {
         display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));
+        margin-bottom: 97px;
     }
 }
 
@@ -262,7 +265,10 @@ body {
 
 .take-action-buttons {
     text-align: center;
-    padding: 47px 0px 0px 0px;
+    padding: 0;
+    .red-button {
+        margin-right: 0.8rem;
+    }
 }
 
 .story-section {
@@ -278,6 +284,7 @@ body {
     }
     @include media-query() {
         padding: 6rem 25% 9rem 25%;
+        margin-top: 97px;
     }
 }
 

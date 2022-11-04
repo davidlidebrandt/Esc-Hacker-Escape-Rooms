@@ -143,6 +143,7 @@ body {
   }
   .hero-buttons .red-button {
     display: inline-block;
+    margin-right: 0.8rem;
   }
   .hero-buttons .online-challenge-button {
     display: none;
@@ -171,6 +172,7 @@ body {
   .testimonials {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
+    padding: 0 9%;
   }
 }
 
@@ -213,6 +215,7 @@ body {
   .popular-challenges {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
+    margin-bottom: 97px;
   }
 }
 
@@ -290,7 +293,10 @@ body {
 
 .take-action-buttons {
   text-align: center;
-  padding: 47px 0px 0px 0px;
+  padding: 0;
+}
+.take-action-buttons .red-button {
+  margin-right: 0.8rem;
 }
 
 .story-section {
@@ -308,6 +314,7 @@ body {
 @media screen and (min-width: 800px) {
   .story-section {
     padding: 6rem 25% 9rem 25%;
+    margin-top: 97px;
   }
 }
 
