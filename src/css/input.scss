@@ -381,6 +381,9 @@ body {
     .footer-info {
         grid-column-start: 1;
         grid-column-end: 5;
+        @include media-query() {
+            margin-top: 40px;
+        }
     }
     .footer-links {
         grid-column-start: 8;
@@ -388,7 +391,8 @@ body {
         margin-top: 40px;
     }
     .footer-social-links {
-        grid-column: span 2 / span 2;
+        grid-column-start: 11;
+        grid-column-end: 13;
         margin-top: 40px;
     }
     @include media-query() {

@@ -426,13 +426,19 @@ body {
   grid-column-start: 1;
   grid-column-end: 5;
 }
+@media screen and (min-width: 800px) {
+  .footer .footer-info {
+    margin-top: 40px;
+  }
+}
 .footer .footer-links {
   grid-column-start: 8;
   grid-column-end: 10;
   margin-top: 40px;
 }
 .footer .footer-social-links {
-  grid-column: span 2/span 2;
+  grid-column-start: 11;
+  grid-column-end: 13;
   margin-top: 40px;
 }
 @media screen and (min-width: 800px) {
