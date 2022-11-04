@@ -403,7 +403,7 @@ body {
   color: #FFF;
 }
 .footer h2 {
-  margin-top: 40px;
+  margin-top: 0px;
   font-size: 18px;
 }
 .footer p {
@@ -422,9 +422,11 @@ body {
 .footer .footer-links {
   grid-column-start: 8;
   grid-column-end: 10;
+  margin-top: 40px;
 }
 .footer .footer-social-links {
   grid-column: span 2/span 2;
+  margin-top: 40px;
 }
 @media screen and (min-width: 800px) {
   .footer {

@@ -358,7 +358,7 @@ body {
     padding: 64px 22px;
     color: #FFF;
     h2 {
-        margin-top: 40px;
+        margin-top: 0px;
         font-size: 18px;
     }
     p {
@@ -378,9 +378,11 @@ body {
     .footer-links {
         grid-column-start: 8;
         grid-column-end: 10;
+        margin-top: 40px;
     }
     .footer-social-links {
         grid-column: span 2 / span 2;
+        margin-top: 40px;
     }
     @include media-query() {
         display: grid;
