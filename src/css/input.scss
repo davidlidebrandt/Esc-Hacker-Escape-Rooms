@@ -2,27 +2,27 @@
 @import "variables";
 
 body {
-    font-family: $main-font;
-    margin: 0;
-  }
+  font-family: $main-font;
+  margin: 0;
+}
 
 .red-button {
-    @extend %button-shared;
-    background-color: $red;
-    color: #FFF;
+  @extend %button-shared;
+  background-color: $red;
+  color: #fff;
 }
 
 .blue-button {
-    @extend %button-shared;
-    background-color: $light-blue;
-    color: $dark-blue;
+  @extend %button-shared;
+  background-color: $light-blue;
+  color: $dark-blue;
 }
 
 .transparent-button {
-    @extend %button-shared;
-    color: $light-blue;
-    background-color: transparent;
-    border: 2px solid $light-blue;
+  @extend %button-shared;
+  color: $light-blue;
+  background-color: transparent;
+  border: 2px solid $light-blue;
 }
 
 .header {
@@ -35,377 +35,413 @@ body {
     margin: 0;
     display: inline-block;
   }
-  
 }
 
 .header-logo {
-    height: 82px;
-    width: 128px;
-    @include media-query() {
-        vertical-align: bottom;
-    }
+  height: 82px;
+  width: 128px;
+  @include media-query() {
+    vertical-align: bottom;
+  }
 }
 
 .header-logo-text {
-    display: inline-block;
-    color: #FFF;
-    font-size: 1.5rem;
-    margin: 0;
-    margin-left: 13px;
-    width: 78px;
-    @include media-query() {
-        width: auto;
-        font-size: 2.5rem;
-    }
+  display: inline-block;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0;
+  margin-left: 13px;
+  width: 78px;
+  @include media-query() {
+    width: auto;
+    font-size: 2.5rem;
+  }
 }
 
 .hamburger-icon {
-    @include media-query() {
-        display: none;
-    }
-    float: right;
-    div {
-        width: 51px;
-        height: 6px;
-        background-color: #FFF;
-        border-radius: 10px;
-        margin-top: 7px;
-    }
+  @include media-query() {
+    display: none;
+  }
+  float: right;
+  div {
+    width: 51px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 7px;
+  }
 }
 
 .header-nav {
-    display: none;
-    margin-top: 58px;
-    @include media-query() {
-        padding: 0px 10%;
-        display: block;
-    }
-    ul {
-        list-style: none;
-        display: flex;
-        justify-content: space-around;
-    }
-    a {
-        @extend %links-shared;
-        font-size: 1.5rem;
-    }
-    a:hover {
-        color: $light-blue;
-    }
+  display: none;
+  margin-top: 58px;
+  @include media-query() {
+    padding: 0px 10%;
+    display: block;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  a {
+    @extend %links-shared;
+    font-size: 1.5rem;
+  }
+  a:hover {
+    color: $light-blue;
+  }
 }
 
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  @include media-query() {
+    display: none;
+  }
+  ul {
+    position: relative;
+    background-color: $dark-blue;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 95%;
+    width: 92%;
+    list-style: none;
+    display: grid;
+    place-content: center;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  }
+  a {
+    @extend %links-shared;
+    font-size: 2.25rem;
+    margin-top: 50px;
+    font-weight: 700;
+  }
+  .close-button {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    color: #fff;
+  }
+}
 
 .hero-image {
-    @include media-query() {
-        height: 468px;
-    }
-    height: 274px;
-    width: 100%;
-    background: url("../images/hero.png") no-repeat center;
-    background-size: cover;
-    margin-bottom: 37px;
+  @include media-query() {
+    height: 468px;
+  }
+  height: 274px;
+  width: 100%;
+  background: url("../images/hero.png") no-repeat center;
+  background-size: cover;
+  margin-bottom: 37px;
 }
 
 .hero-buttons {
+  .red-button {
+    display: none;
+  }
+  @include media-query() {
+    position: relative;
+    .large-buttons {
+      position: absolute;
+      top: -80px;
+      width: 100%;
+      text-align: center;
+    }
+    .blue-button {
+      display: inline-block;
+      margin-right: 17px;
+    }
     .red-button {
-        display: none;
+      display: inline-block;
+      margin-right: 0.8rem;
     }
-    @include media-query() {
-        position: relative;
-        .large-buttons {
-            position: absolute;
-            top: -80px;
-            width: 100%;
-            text-align: center;
-        }
-        .blue-button {
-            display: inline-block;
-            margin-right: 17px;
-        }
-        .red-button {
-            display: inline-block;
-            margin-right: 0.8rem;
-        }
-        .online-challenge-button {
-            display: none;
-        }
+    .online-challenge-button {
+      display: none;
     }
+  }
 }
 
 .online-challenge-button {
-    border: none;
-    background-color: transparent;
-    text-decoration: underline;
-    font-family: $main-font;
-    color: $blue;
-    font-weight: 700;
-    margin: 0 auto;
-    display: block;
-    font-size: 1rem;
-    margin-top: 30px;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  font-family: $main-font;
+  color: $blue;
+  font-weight: 700;
+  margin: 0 auto;
+  display: block;
+  font-size: 1rem;
+  margin-top: 30px;
 }
 
 .testimonials {
-    margin: 0;
-    margin-top: 67px;
-    margin-bottom: 105px;
-    @include media-query() {
-        display: grid;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        padding: 0 9%;
-    }
+  margin: 0;
+  margin-top: 67px;
+  margin-bottom: 105px;
+  @include media-query() {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    padding: 0 9%;
+  }
 }
 
 .testimonial {
-    display: none;
-    &:first-child {
-        display: flex;
-    }
-    @include media-query() {
-        display: flex;
-        grid-column: span 6/ span 6;
-    }
+  display: none;
+  &:first-child {
+    display: flex;
+  }
+  @include media-query() {
+    display: flex;
+    grid-column: span 6 / span 6;
+  }
 }
 
 .testimonial-text {
-    display: block;
-    margin: 0;
-    margin-right: 30px;
-    margin-left: 10px;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 1.5rem;
+  display: block;
+  margin: 0;
+  margin-right: 30px;
+  margin-left: 10px;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
 }
 
 .testimonial-help-text {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .testimonial-image {
-    margin-left: 21px;
-    height: 72px;
+  margin-left: 21px;
+  height: 72px;
 }
 
 .popular-challenges {
-    margin-bottom: 3rem;
-    @include media-query() {
-        display: grid;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        margin-bottom: 97px;
-    }
+  margin-bottom: 3rem;
+  @include media-query() {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    margin-bottom: 97px;
+  }
 }
 
 .popular-challenges-heading {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 400;
-    h2 {
-        margin-bottom: 44px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    @include media-query() {
-        display: block;
-        grid-column: span 12 / span 12;
-        margin-bottom: 5rem;
-    }
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  h2 {
+    margin-bottom: 44px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @include media-query() {
+    display: block;
+    grid-column: span 12 / span 12;
+    margin-bottom: 5rem;
+  }
 }
 
 .challenge-card {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    margin-left: 52px;
-    margin-right: 38px;
-    display: none;
-    @include media-query() {
-        display: block;
-        grid-column: span 4 / span 4;
-    }
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  margin-left: 52px;
+  margin-right: 38px;
+  display: none;
+  @include media-query() {
+    display: block;
+    grid-column: span 4 / span 4;
+  }
 }
 
 .first-challenge-card {
-    display: block;
+  display: block;
 }
 
 .challenge-card-image {
-    height: 219px;
-    background: url("../images/hero.png") no-repeat top;
-    background-size: cover;
-    border-radius: 8px 8px 0px 0px;
+  height: 219px;
+  background: url("../images/hero.png") no-repeat top;
+  background-size: cover;
+  border-radius: 8px 8px 0px 0px;
 }
 
 .challenge-card-info {
-    padding: 0px 17px 13px 17px;
-    img {
-        vertical-align: middle;
-    }
-    span {
-        margin-left: 0.5rem;
-        vertical-align: middle;
-    }
-    button {
-        margin: 0;
-        font-size: 1rem;
-    }
-    h3 {
-        font-weight: 400;
-    }
+  padding: 0px 17px 13px 17px;
+  img {
+    vertical-align: middle;
+  }
+  span {
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+  button {
+    margin: 0;
+    font-size: 1rem;
+  }
+  h3 {
+    font-weight: 400;
+  }
 }
 
 .card-button-parent {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .card-heading {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
-    margin-top: 12px;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  margin-top: 12px;
 }
 
 .take-action-buttons {
-    text-align: center;
-    padding: 0;
-    .red-button {
-        margin-right: 0.8rem;
-    }
+  text-align: center;
+  padding: 0;
+  .red-button {
+    margin-right: 0.8rem;
+  }
 }
 
 .story-section {
-    margin-top: 3rem;
-    padding: 5.5rem 2rem;
-    background-color: $dark-blue;
-    color: #FFF;
-    text-align: center;
-    p {
-        font-size: 1.5rem;
-        margin-bottom: 3rem;
-        margin-top: 0px;
-    }
-    @include media-query() {
-        padding: 6rem 25% 9rem 25%;
-        margin-top: 97px;
-    }
+  margin-top: 3rem;
+  padding: 5.5rem 2rem;
+  background-color: $dark-blue;
+  color: #fff;
+  text-align: center;
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    margin-top: 0px;
+  }
+  @include media-query() {
+    padding: 6rem 25% 9rem 25%;
+    margin-top: 97px;
+  }
 }
 
 .action-section {
-    h3 {
-        font-weight: 700;
-        font-size: 2rem;
-        margin-top: 0;
-         @include media-query() {
-            margin-bottom: 25px;
-            margin-top: 0px;
-         }
-    }
-    p {
-        font-size: 1.5rem;
-        margin-bottom: 48px;
-        @include media-query() {
-            margin-bottom: 30px;
-            margin-top: 0px;
-        }
-    }
-    button {
-        margin: 0;
-    }
-    .red-button {
-        @include media-query() {
-            width: max-content;
-        }
-    }
+  h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 0;
     @include media-query() {
-        display: grid;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
+      margin-bottom: 25px;
+      margin-top: 0px;
     }
+  }
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 48px;
+    @include media-query() {
+      margin-bottom: 30px;
+      margin-top: 0px;
+    }
+  }
+  button {
+    margin: 0;
+  }
+  .red-button {
+    @include media-query() {
+      width: max-content;
+    }
+  }
+  @include media-query() {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
 }
 
 .booking-image {
-    @include action-section-image("../images/people-working.png");
-    @include media-query() {
-        grid-column: span 6 / span 6;
-        height: 460px;
-    }
+  @include action-section-image("../images/people-working.png");
+  @include media-query() {
+    grid-column: span 6 / span 6;
+    height: 460px;
+  }
 }
 
 .view-challanges-section {
-    @include media-query() {
-        padding-bottom: 12rem;
-    }
+  @include media-query() {
+    padding-bottom: 12rem;
+  }
 }
 
 .view-challanges-image {
-    @include action-section-image("../images/woman-working.png");
-    @include media-query() {
-        grid-column: span 6 / span 6;
-        grid-column-start: 7;
-        height: 460px;
-    }
+  @include action-section-image("../images/woman-working.png");
+  @include media-query() {
+    grid-column: span 6 / span 6;
+    grid-column-start: 7;
+    height: 460px;
+  }
 }
 
 .action-section-info {
-    @include action-section-info();
-    @include media-query() {
-        grid-column: span 6 / span 6;
-        padding: 0 15%;
-        display: grid;
-        place-content: center;
-    }
+  @include action-section-info();
+  @include media-query() {
+    grid-column: span 6 / span 6;
+    padding: 0 15%;
+    display: grid;
+    place-content: center;
+  }
 }
 
 .challenge-section-info {
-    @include media-query(){
-        grid-row-start: 1;
-    }
+  @include media-query() {
+    grid-row-start: 1;
+  }
 }
 
 .footer {
-    margin-top: 34px;
-    background-color: $dark-blue;
-    padding: 64px 22px;
-    color: #FFF;
-    h2 {
-        margin-top: 0px;
-        font-size: 18px;
-    }
-    p {
-        font-size: 18px;
-    }
-    a {
-        @extend %links-shared;
-        margin-bottom: .5rem;
-    }
-    .site-map-play-links {
-        margin-top: 2rem;
-    }
-    .footer-info {
-        grid-column-start: 1;
-        grid-column-end: 5;
-        @include media-query() {
-            margin-top: 40px;
-        }
-    }
-    .footer-links {
-        grid-column-start: 8;
-        grid-column-end: 10;
-        margin-top: 40px;
-    }
-    .footer-social-links {
-        grid-column-start: 11;
-        grid-column-end: 13;
-        margin-top: 40px;
-    }
+  margin-top: 34px;
+  background-color: $dark-blue;
+  padding: 64px 22px;
+  color: #fff;
+  h2 {
+    margin-top: 0px;
+    font-size: 18px;
+  }
+  p {
+    font-size: 18px;
+  }
+  a {
+    @extend %links-shared;
+    margin-bottom: 0.5rem;
+  }
+  .site-map-play-links {
+    margin-top: 2rem;
+  }
+  .footer-info {
+    grid-column-start: 1;
+    grid-column-end: 5;
     @include media-query() {
-        display: grid;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        padding: 6rem 8rem;
-        margin-top: 0;
+      margin-top: 40px;
     }
+  }
+  .footer-links {
+    grid-column-start: 8;
+    grid-column-end: 10;
+    margin-top: 40px;
+  }
+  .footer-social-links {
+    grid-column-start: 11;
+    grid-column-end: 13;
+    margin-top: 40px;
+  }
+  @include media-query() {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    padding: 6rem 8rem;
+    margin-top: 0;
+  }
 }
 
 .footer-nav {
-    ul {
-        list-style: none;
-        padding: 0;
-    }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 }
