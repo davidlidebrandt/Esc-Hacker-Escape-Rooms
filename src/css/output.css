@@ -112,11 +112,14 @@ body {
 }
 
 .mobile-nav {
+  z-index: 2;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
+  animation: fadeIn 700ms;
 }
 @media screen and (min-width: 800px) {
   .mobile-nav {
@@ -150,6 +153,31 @@ body {
   color: #fff;
 }
 
+.opacity-layer {
+  z-index: 1;
+  display: none;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+}
+@media screen and (min-width: 800px) {
+  .opacity-layer {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .hero-image {
   height: 274px;
   width: 100%;
@@ -492,6 +520,10 @@ body {
 .footer-nav ul {
   list-style: none;
   padding: 0;
+}
+
+.active {
+  display: block;
 }
 
 /*# sourceMappingURL=output.css.map */

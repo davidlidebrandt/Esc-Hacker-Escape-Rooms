@@ -12,6 +12,7 @@
     />
     <script src="https://kit.fontawesome.com/30b290cadc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/css/output.css" />
+    <script defer src="src/js/main.js"></script>
     <title>[Esc] Escape Rooms</title>
   </head>
   <body>
@@ -33,7 +34,7 @@
           <li><a href="">Contact us</a></li>
         </ul>
       </nav>
-      <nav class="mobile-nav">
+      <nav id="mobile-navigation" class="mobile-nav">
         <ul>
           <i class="fa-solid fa-xmark fa-4x close-button"></i>
           <li><a href="">Play online</a></li>
@@ -42,7 +43,8 @@
           <li><a href="">Contact us</a></li>
         </ul>
       </nav>
-      <div class="hamburger-icon">
+      <div class="opacity-layer"></div>
+      <div role="button" aria-controls="mobile-navigation" class="hamburger-icon">
         <div></div>
         <div></div>
         <div></div>
